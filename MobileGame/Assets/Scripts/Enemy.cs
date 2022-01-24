@@ -8,11 +8,10 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    private int currentHearts = 0;
     PlayerController playerController; // Reference to the PlayerController Script
+    StarCollect starCollect;
     public GameObject bloodFX; // Reference to a Blood Effect
     public bool above; // Does this only work when you land on it?
-    private BoxCollider2D Coll2D; // Reference to the enemies collider
 
     private void OnCollisionEnter2D(Collision2D collision) // Collides with a collider
     {
@@ -44,32 +43,24 @@ public class Enemy : MonoBehaviour
     }
     void Start() // called at scene start
     {
-        currentHearts = PlayerPrefs.GetInt("Hearts", 0);
         playerController = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>(); // Finds the player within the scene
-        Coll2D = GetComponent<BoxCollider2D>(); // Finds the collider
+        starCollect = GameObject.FindGameObjectWithTag("Player").GetComponent<StarCollect>(); // Finds the player within the scene
     }
 
-    IEnumerator HitSomething()
-    {
-        //Debug.Log("Hit");
-        Coll2D.enabled = false;
-        yield return new WaitForSecondsRealtime(1f);
-        Coll2D.enabled = true;
-    }
 
     void checkDeath()
     {
-        currentHearts = PlayerPrefs.GetInt("Hearts", 0);
         Instantiate(bloodFX, transform.position, Quaternion.identity); // Spawns the blood
-        if (currentHearts <= 0)
+        if (starCollect.currentHearts <= 0)
         {
             playerController.movement = false;
         }
-        else if (currentHearts > 0)
+        else if (starCollect.currentHearts > 0)
         {
-            currentHearts--;
-            PlayerPrefs.SetInt("Hearts", currentHearts);
-            StartCoroutine(HitSomething());
+            Destroy(gameObject);
+            starCollect.currentHearts--;
+            PlayerPrefs.SetInt("Hearts", starCollect.currentHearts);
+            starCollect.heartAmount.text = PlayerPrefs.GetInt("Hearts", 0).ToString();
         }
     }
 }

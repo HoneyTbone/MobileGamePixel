@@ -29,7 +29,6 @@ public class Score : MonoBehaviour
         {
             score = Mathf.Floor(player.position.y);
             UpdateScore();
-
         }
     }
 

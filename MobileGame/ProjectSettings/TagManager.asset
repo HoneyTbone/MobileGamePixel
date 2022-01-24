@@ -11,6 +11,8 @@ TagManager:
   - Chest
   - Flyer
   - Heart
+  - Unlockables
+  - Canvas
   layers:
   - Default
   - TransparentFX

@@ -7,6 +7,8 @@ using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
+    StatManager statManager;
+
     public float speed; // How fast the player moves
     private Rigidbody2D rb; // Reference to the players rigid body
     private Vector2 characterVelocity; 
@@ -25,6 +27,7 @@ public class PlayerController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>(); // Finds the Rigid Body
         Coll2D = GetComponent<BoxCollider2D>(); // Finds the collider
+        statManager = GameObject.FindGameObjectWithTag("Canvas").GetComponent<StatManager>();
     }
 
     // Update is called once per frame
@@ -60,6 +63,8 @@ public class PlayerController : MonoBehaviour
     {
         //Debug.Log("Hit");
         Coll2D.enabled = false;
+        statManager.deaths++;
+        statManager.LevelEnd();
         yield return new WaitForSecondsRealtime(3f);
         Scene scene = SceneManager.GetActiveScene(); SceneManager.LoadScene(scene.name); // reload the scene
     }

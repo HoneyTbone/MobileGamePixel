@@ -28,9 +28,21 @@ public class SelectScene : MonoBehaviour
     {
         SceneManager.LoadScene("05Space");
     }
+    public void SelectDesertLevel()
+    {
+        SceneManager.LoadScene("06Desert");
+    }
     public void LevelSelectionScreen()
     {
         SceneManager.LoadScene("LevelSelect");
+    }
+    public void ShopScreen()
+    {
+        SceneManager.LoadScene("Shop");
+    }
+    public void StatsScreen()
+    {
+        SceneManager.LoadScene("Stats");
     }
     public void SelectMenu()
     {

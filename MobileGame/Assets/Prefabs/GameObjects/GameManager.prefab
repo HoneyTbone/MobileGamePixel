@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 5258737463573284264}
   - component: {fileID: 5258737463573284267}
   - component: {fileID: 5258737463573284266}
-  - component: {fileID: 5221064356981641874}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: GameManager
@@ -100,7 +99,7 @@ MonoBehaviour:
   numberOfPlatformTypes: 47
   chanceForStars: 0
   star: {fileID: 0}
-  chanceForHearts: 50
+  chanceForHearts: 1000
   heart: {fileID: 4107451696834808661, guid: 8d6306827a97df544ada2f619c893fac, type: 3}
 --- !u!114 &5258737463573284266
 MonoBehaviour:
@@ -120,17 +119,3 @@ MonoBehaviour:
   player: {fileID: 0}
   Highscore_levelName: 
   LastScore_levelName: 
---- !u!114 &5221064356981641874
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5258737463573284265}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 99cac012c784934429c58a695974d54f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  starAmount: {fileID: 0}
-  currentStars: 0

@@ -74,7 +74,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 5
   m_Sprite: {fileID: -2771404504902213962, guid: c86b5ac94c92bb64a8e66bad4179272b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -102,6 +102,8 @@ MonoBehaviour:
   startWaitTime: 0.25
   moveSpotLeft: {fileID: 1108449297299422710}
   moveSpotRight: {fileID: 3978535468531247512}
+  flips: 0
+  oneWay: 0
 --- !u!114 &4266694057672633045
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -126,7 +128,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.04042378, y: -0.030317783}
