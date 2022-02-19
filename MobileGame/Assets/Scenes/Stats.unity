@@ -237,7 +237,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 5.03, y: -15}
+  m_AnchoredPosition: {x: 3.6, y: -15}
   m_SizeDelta: {x: 300, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &127071308
@@ -273,7 +273,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: /24
+  m_Text: /26
 --- !u!222 &127071309
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -474,7 +474,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -150.84, y: -15}
+  m_AnchoredPosition: {x: -153.16, y: -15}
   m_SizeDelta: {x: 300, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &381216588
@@ -1407,7 +1407,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -150.34, y: -15}
+  m_AnchoredPosition: {x: -153, y: -15}
   m_SizeDelta: {x: 300, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1305155692
@@ -1801,7 +1801,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 5.4, y: -15}
+  m_AnchoredPosition: {x: 3.8, y: -15}
   m_SizeDelta: {x: 300, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2105807844
@@ -1837,7 +1837,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: /35
+  m_Text: /40
 --- !u!222 &2105807845
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1925,3 +1925,16 @@ PrefabInstance:
     - {fileID: 3294810726485098239, guid: 27e0348e5ca01cb4da52a3beeb988a54, type: 3}
     - {fileID: 3294810726759532827, guid: 27e0348e5ca01cb4da52a3beeb988a54, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 27e0348e5ca01cb4da52a3beeb988a54, type: 3}
+--- !u!1 &3294810725822115902 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3294810726759532831, guid: 27e0348e5ca01cb4da52a3beeb988a54, type: 3}
+  m_PrefabInstance: {fileID: 3294810725822115901}
+  m_PrefabAsset: {fileID: 0}
+--- !u!81 &3294810725822115903
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3294810725822115902}
+  m_Enabled: 1

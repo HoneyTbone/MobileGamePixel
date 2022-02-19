@@ -24,14 +24,19 @@ public class Skin_Hat_Selection : MonoBehaviour
         skinList = GameObject.FindGameObjectWithTag("Unlockables").GetComponent<Skin_HatList>();
         skins = skinList.skins;
         hats = skinList.hats;
+        currentHat = PlayerPrefs.GetInt("SavedHat", 0);
+        currentSkin = PlayerPrefs.GetInt("SavedSkin", 0);
+        hatImage.sprite = hats[currentHat];
+        skinImage.sprite = skins[currentSkin];
     }
     public void NextSkinOption()
     {
         currentSkin++;
-        if(currentSkin == skins.Count)
+        if (currentSkin == skins.Count)
         {
             currentSkin = 0;
         }
+        PlayerPrefs.SetInt("SavedSkin", currentSkin);
         skinImage.sprite = skins[currentSkin];
     }
 
@@ -42,13 +47,15 @@ public class Skin_Hat_Selection : MonoBehaviour
         {
             currentHat = 0;
         }
+        PlayerPrefs.SetInt("SavedSkin", currentSkin);
         hatImage.sprite = hats[currentHat];
     }
     //////////////////////////////////////////
     public void BackSkinOption()
     {
         currentSkin--;
-        if(currentSkin == -1)
+        PlayerPrefs.SetInt("SavedSkin", currentSkin);
+        if (currentSkin == -1)
         {
             currentSkin = skins.Count - 1;
         }
@@ -58,7 +65,8 @@ public class Skin_Hat_Selection : MonoBehaviour
     public void BackHatOption()
     {
         currentHat--;
-        if(currentHat == -1)
+        PlayerPrefs.SetInt("SavedHat", currentHat);
+        if (currentHat == -1)
         {
             currentHat = hats.Count - 1;
         }

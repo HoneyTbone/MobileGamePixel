@@ -98,7 +98,7 @@ MonoBehaviour:
   maxY: 1.5
   numberOfPlatformTypes: 47
   chanceForStars: 0
-  star: {fileID: 0}
+  star: {fileID: 3021054035584276852, guid: a55239c4611ff604a942267cd5d93e2b, type: 3}
   chanceForHearts: 1000
   heart: {fileID: 4107451696834808661, guid: 8d6306827a97df544ada2f619c893fac, type: 3}
 --- !u!114 &5258737463573284266

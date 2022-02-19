@@ -50,17 +50,20 @@ public class Enemy : MonoBehaviour
 
     void checkDeath()
     {
-        Instantiate(bloodFX, transform.position, Quaternion.identity); // Spawns the blood
-        if (starCollect.currentHearts <= 0)
+        if(playerController.checkingForEnemies == true)
         {
-            playerController.movement = false;
-        }
-        else if (starCollect.currentHearts > 0)
-        {
-            Destroy(gameObject);
-            starCollect.currentHearts--;
-            PlayerPrefs.SetInt("Hearts", starCollect.currentHearts);
-            starCollect.heartAmount.text = PlayerPrefs.GetInt("Hearts", 0).ToString();
-        }
+            Instantiate(bloodFX, transform.position, Quaternion.identity); // Spawns the blood
+            if (starCollect.currentHearts <= 0)
+            {
+                playerController.movement = false;
+            }
+            else if (starCollect.currentHearts > 0)
+            {
+                Destroy(gameObject);
+                starCollect.currentHearts--;
+                PlayerPrefs.SetInt("Hearts", starCollect.currentHearts);
+                starCollect.heartAmount.text = PlayerPrefs.GetInt("Hearts", 0).ToString();
+            }
+        } 
     }
 }

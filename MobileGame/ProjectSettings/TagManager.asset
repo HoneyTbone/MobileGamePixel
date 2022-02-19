@@ -13,6 +13,7 @@ TagManager:
   - Heart
   - Unlockables
   - Canvas
+  - LargeChest
   layers:
   - Default
   - TransparentFX

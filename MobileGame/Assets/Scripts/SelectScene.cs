@@ -32,6 +32,10 @@ public class SelectScene : MonoBehaviour
     {
         SceneManager.LoadScene("06Desert");
     }
+    public void SelectOceanLevel()
+    {
+        SceneManager.LoadScene("07Ocean");
+    }
     public void LevelSelectionScreen()
     {
         SceneManager.LoadScene("LevelSelect");

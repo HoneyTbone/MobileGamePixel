@@ -29,6 +29,11 @@ public class StatManager : MonoBehaviour
         }
     }
 
+    void OnApplicationQuit()
+    {
+        LevelEnd();
+    }
+
     // Update is called once per frame
     public void LevelEnd()
     {
@@ -38,5 +43,10 @@ public class StatManager : MonoBehaviour
         PlayerPrefs.SetFloat("TotalDistance", distance);
         PlayerPrefs.SetInt("StarsCollected", stars);
         PlayerPrefs.SetInt("TotalDeaths", deaths);
+    }
+
+    public void UpdateStars()
+    {
+        PlayerPrefs.SetInt("StarsCollected", stars);
     }
 }

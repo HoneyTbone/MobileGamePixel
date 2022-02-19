@@ -35,6 +35,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Screen.sleepTimeout = SleepTimeout.NeverSleep; // disallows screen dimming
         spawnHeightChecker = platformCount - 150; //Sets the position of the checker based on the number of platforms spawned
        // Debug.Log(spawnPosition);
         spawnNewPlatforms(spawnPosition); // calls the function using the spawn position Vector3

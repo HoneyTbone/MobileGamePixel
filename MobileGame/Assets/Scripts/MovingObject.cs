@@ -16,17 +16,22 @@ public class MovingObject : MonoBehaviour
     public bool oneWay;
     private int randLeftOrRight;
 
+    public bool screenWize;
+
 
     // Start is called before the first frame update
     void Start()
     {
-        moveSpotLeft.position = new Vector3(-3.5f, transform.position.y, 0f);
-        moveSpotRight.position = new Vector3(3.5f, transform.position.y, 0f);
-        if(oneWay == true)
+        if(screenWize == false)
         {
-            moveSpotLeft.position = new Vector3(-5f, transform.position.y, 0f);
-            moveSpotRight.position = new Vector3(5f, transform.position.y, 0f);
-        }
+            moveSpotLeft.position = new Vector3(-3.5f, transform.position.y, 0f);
+            moveSpotRight.position = new Vector3(3.5f, transform.position.y, 0f);
+            if (oneWay == true)
+            {
+                moveSpotLeft.position = new Vector3(-5f, transform.position.y, 0f);
+                moveSpotRight.position = new Vector3(5f, transform.position.y, 0f);
+            }
+        } 
         movingLeft = true;
         waitTime = startWaitTime;
         randLeftOrRight = Random.Range(0, 2);
@@ -45,12 +50,12 @@ public class MovingObject : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(movingLeft == true)
+        if (flips == true)
         {
-            if (flips == true)
-            {
-                transform.rotation = Quaternion.Euler(0, 0, 0);
-            }
+            transform.rotation = Quaternion.Euler(0, 0, 0);
+        }
+        if (movingLeft == true)
+        {
             transform.position = Vector2.MoveTowards(transform.position, moveSpotLeft.position, speed * Time.deltaTime);
             if (Vector2.Distance(transform.position, moveSpotLeft.position) < 0.05f)
             {

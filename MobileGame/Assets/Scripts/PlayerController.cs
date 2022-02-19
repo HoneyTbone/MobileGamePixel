@@ -14,11 +14,18 @@ public class PlayerController : MonoBehaviour
     private Vector2 characterVelocity; 
     public bool movement = true;
 
+    public bool checkingForEnemies = true;
+    public bool checkingForItems = true;
+
+    //public bool needs platformReset = false;
+
     public BoxCollider2D Coll2D; // Reference to the players collider
 
     public Transform playerArtTransform; //Reference to the art
 
     private float moveX;
+
+    private bool dead = false;
 
     
 
@@ -46,7 +53,11 @@ public class PlayerController : MonoBehaviour
         }   
         if(movement == false) // what happens when the player doesnt move
         {
-            StartCoroutine(death());
+            if(dead == false)
+            {
+                StartCoroutine(death());
+                dead = true;
+            }
         }
         if(moveX < -0.05f) // Rotates the art
         {
@@ -61,7 +72,7 @@ public class PlayerController : MonoBehaviour
 
     IEnumerator death()
     {
-        //Debug.Log("Hit");
+        Debug.Log("Hit");
         Coll2D.enabled = false;
         statManager.deaths++;
         statManager.LevelEnd();

@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &1336883780479102596
+--- !u!1 &7716836855646574436
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,11 +8,11 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1336883780479102593}
-  - component: {fileID: 1336883780479102592}
-  - component: {fileID: 1336883780479102594}
-  - component: {fileID: 1336883780479102597}
-  - component: {fileID: 5093554467764086483}
+  - component: {fileID: 7716836855646574456}
+  - component: {fileID: 7716836855646574459}
+  - component: {fileID: -4614423773768881759}
+  - component: {fileID: 4538688139845036012}
+  - component: {fileID: 5558350751062710720}
   m_Layer: 0
   m_Name: Trampoline_Item
   m_TagString: Untagged
@@ -20,27 +20,27 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1336883780479102593
+--- !u!4 &7716836855646574456
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1336883780479102596}
+  m_GameObject: {fileID: 7716836855646574436}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.99, y: -1, z: 0}
+  m_LocalPosition: {x: -2.11, y: -0.91, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &1336883780479102592
+--- !u!212 &7716836855646574459
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1336883780479102596}
+  m_GameObject: {fileID: 7716836855646574436}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -85,35 +85,30 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!68 &1336883780479102594
-EdgeCollider2D:
+--- !u!114 &-4614423773768881759
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1336883780479102596}
+  m_GameObject: {fileID: 7716836855646574436}
   m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 1
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_EdgeRadius: 0
-  m_Points:
-  - {x: -0.31672454, y: -0.1295569}
-  - {x: 0.31356454, y: -0.12955695}
-  m_AdjacentStartPoint: {x: 0, y: 0}
-  m_AdjacentEndPoint: {x: 0, y: 0}
-  m_UseAdjacentStartPoint: 0
-  m_UseAdjacentEndPoint: 0
---- !u!251 &1336883780479102597
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f4503bf0a04fd344b275fd5616935b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jumpForce: 20
+  effectFX: {fileID: 6239843497886712988, guid: 821b34ea878cc4741a39cad232c7d5bf, type: 3}
+  aboveOnly: 1
+  doesDelete: 0
+  timeToWait: 2
+--- !u!251 &4538688139845036012
 PlatformEffector2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1336883780479102596}
+  m_GameObject: {fileID: 7716836855646574436}
   m_Enabled: 1
   m_UseColliderMask: 1
   m_ColliderMask:
@@ -126,20 +121,29 @@ PlatformEffector2D:
   m_UseSideFriction: 0
   m_UseSideBounce: 0
   m_SideArc: 1
---- !u!114 &5093554467764086483
-MonoBehaviour:
+--- !u!61 &5558350751062710720
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1336883780479102596}
+  m_GameObject: {fileID: 7716836855646574436}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f4503bf0a04fd344b275fd5616935b3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  jumpForce: 15
-  effectFX: {fileID: 6239843497886712988, guid: 821b34ea878cc4741a39cad232c7d5bf, type: 3}
-  aboveOnly: 1
-  doesDelete: 0
-  timeToWait: 0.6
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 1
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.005823016, y: -0.14994383}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.55162454, y: 0.042106986}
+  m_EdgeRadius: 0

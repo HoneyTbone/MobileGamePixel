@@ -38,6 +38,12 @@ public class CameraScaling : MonoBehaviour
             Camera.main.orthographicSize = 8.406063f;
 
         }
+        else if (Camera.main.aspect > 0)
+        {
+            Debug.Log("9:20");
+            Camera.main.orthographicSize = 8.5f;
+
+        }
         // outputs the closest aspect ratio to the console
     }
 }

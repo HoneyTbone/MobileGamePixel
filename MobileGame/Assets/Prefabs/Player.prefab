@@ -97,6 +97,7 @@ GameObject:
   - component: {fileID: 8019105826480957996}
   - component: {fileID: -6248125314616141413}
   - component: {fileID: 4385817862449990005}
+  - component: {fileID: 1679449579636592855}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -180,6 +181,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   movement: 1
+  checkingForEnemies: 1
+  checkingForItems: 1
   Coll2D: {fileID: 0}
   playerArtTransform: {fileID: 628575775751432568}
 --- !u!114 &-6248125314616141413
@@ -211,6 +214,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hatArt: {fileID: 1160871635729157463}
   skinArt: {fileID: 9133510695145183798}
+--- !u!81 &1679449579636592855
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8019105826480957987}
+  m_Enabled: 1
 --- !u!1 &8743522098303013863
 GameObject:
   m_ObjectHideFlags: 0

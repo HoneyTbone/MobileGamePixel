@@ -1478,6 +1478,7 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 6770448242665264370, guid: 8fa267228f0f0194f98486221b45c9b7, type: 3}
     - {fileID: 2980953093294219247, guid: 8fa267228f0f0194f98486221b45c9b7, type: 3}
+    - {fileID: 2980953093294219240, guid: 8fa267228f0f0194f98486221b45c9b7, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 8fa267228f0f0194f98486221b45c9b7, type: 3}
 --- !u!4 &1227832046 stripped
 Transform:
@@ -2494,7 +2495,7 @@ PrefabInstance:
     - target: {fileID: 5258737463573284267, guid: d551365d81d492c46b1ea1764f231af1, type: 3}
       propertyPath: star
       value: 
-      objectReference: {fileID: 4107451696834808661, guid: 14eaf2644c5e163498e6b2a23b4666ce, type: 3}
+      objectReference: {fileID: 3021054035584276852, guid: a55239c4611ff604a942267cd5d93e2b, type: 3}
     - target: {fileID: 5258737463573284267, guid: d551365d81d492c46b1ea1764f231af1, type: 3}
       propertyPath: player
       value: 
@@ -2505,7 +2506,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5258737463573284267, guid: d551365d81d492c46b1ea1764f231af1, type: 3}
       propertyPath: chanceForStars
-      value: 15
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 5258737463573284267, guid: d551365d81d492c46b1ea1764f231af1, type: 3}
       propertyPath: numberOfPlatformTypes
@@ -2866,7 +2867,7 @@ PrefabInstance:
     - target: {fileID: 5258737463573284267, guid: d551365d81d492c46b1ea1764f231af1, type: 3}
       propertyPath: platformPrefab.Array.data[87]
       value: 
-      objectReference: {fileID: 3388159347269159320, guid: b40d1fb8411c4f24f8f2e263095c8b31, type: 3}
+      objectReference: {fileID: 4558506312202026023, guid: 0f1ac3c19cf0c3d4db84ba5f28a033c6, type: 3}
     - target: {fileID: 5258737463573284267, guid: d551365d81d492c46b1ea1764f231af1, type: 3}
       propertyPath: platformPrefab.Array.data[88]
       value: 

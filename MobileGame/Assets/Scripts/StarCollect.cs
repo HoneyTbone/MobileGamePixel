@@ -27,20 +27,22 @@ public class StarCollect : MonoBehaviour
         {
             currentStars++;
             starsThisLevel++;
+            statManager.stars = statManager.stars + 1;
             PlayerPrefs.SetInt("TotalStars", currentStars);
             PlayerPrefs.SetInt("StarsThisLevel", starsThisLevel);
             starsThisLevelText.text = PlayerPrefs.GetInt("StarsThisLevel", 0).ToString();
-            statManager.stars = statManager.stars++;
+            statManager.UpdateStars();
         }
         if (collision.gameObject.CompareTag("Chest")) // If its the Player
         {
-            chestNumber = Random.Range(3, 7);
+            chestNumber = Random.Range(2, 5);
             currentStars = currentStars + chestNumber;
             starsThisLevel = starsThisLevel + chestNumber;
+            statManager.stars = statManager.stars + chestNumber;
             PlayerPrefs.SetInt("TotalStars", currentStars);
             PlayerPrefs.SetInt("StarsThisLevel", starsThisLevel);
             starsThisLevelText.text = PlayerPrefs.GetInt("StarsThisLevel", 0).ToString();
-            statManager.stars = statManager.stars + chestNumber;
+            statManager.UpdateStars();
         }
         if (collision.gameObject.CompareTag("Heart")) // If its the Player
         {
