@@ -47,29 +47,29 @@ public class Skin_Hat_Selection : MonoBehaviour
         {
             currentHat = 0;
         }
-        PlayerPrefs.SetInt("SavedSkin", currentSkin);
+        PlayerPrefs.SetInt("SavedHat", currentHat);
         hatImage.sprite = hats[currentHat];
     }
     //////////////////////////////////////////
     public void BackSkinOption()
     {
         currentSkin--;
-        PlayerPrefs.SetInt("SavedSkin", currentSkin);
         if (currentSkin == -1)
         {
             currentSkin = skins.Count - 1;
         }
+        PlayerPrefs.SetInt("SavedSkin", currentSkin);
         skinImage.sprite = skins[currentSkin];
     }
 
     public void BackHatOption()
     {
         currentHat--;
-        PlayerPrefs.SetInt("SavedHat", currentHat);
         if (currentHat == -1)
         {
             currentHat = hats.Count - 1;
         }
+        PlayerPrefs.SetInt("SavedHat", currentHat);
         hatImage.sprite = hats[currentHat];
     }
 
